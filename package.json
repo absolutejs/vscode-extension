@@ -1,0 +1,60 @@
+{
+  "name": "absolutejs-vscode",
+  "displayName": "AbsoluteJS",
+  "description": "VS Code support for AbsoluteJS projects, starting with HTML and HTMX island authoring.",
+  "version": "0.0.8",
+  "license": "BSL-1.1",
+  "publisher": "AbsoluteJS",
+  "main": "./extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/absolutejs/vscode-extension.git"
+  },
+  "homepage": "https://github.com/absolutejs/absolutejs",
+  "bugs": {
+    "url": "https://github.com/absolutejs/vscode-extension/issues"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "absolutejs",
+    "html",
+    "htmx",
+    "islands",
+    "custom-data",
+    "absolute-island",
+    "framework",
+    "editor"
+  ],
+  "files": [
+    "extension.js",
+    "html-custom-data.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "contributes": {
+    "html.customData": [
+      "./html-custom-data.json"
+    ]
+  },
+  "scripts": {
+    "config": "absolute config"
+  },
+  "devDependencies": {
+    "@absolutejs/absolute": "^0.19.0-beta.1051"
+  }
+}
