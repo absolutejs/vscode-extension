@@ -1,0 +1,83 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "absolute-island",
+      "description": "Platform-native AbsoluteJS island element for HTML and HTMX host pages. AbsoluteJS server rendering lowers this element into SSR island markup and the client bootstrap hydrates it according to the hydrate mode.",
+      "attributes": [
+        {
+          "name": "framework",
+          "description": "Target framework runtime for this island component.",
+          "values": [
+            {
+              "name": "react"
+            },
+            {
+              "name": "svelte"
+            },
+            {
+              "name": "vue"
+            },
+            {
+              "name": "angular"
+            }
+          ]
+        },
+        {
+          "name": "component",
+          "description": "Registry component name to render for this island."
+        },
+        {
+          "name": "hydrate",
+          "description": "Client hydration timing. load hydrates immediately, idle waits for idle time, visible waits for intersection, and none renders static HTML only.",
+          "values": [
+            {
+              "name": "load"
+            },
+            {
+              "name": "idle"
+            },
+            {
+              "name": "visible"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        },
+        {
+          "name": "props",
+          "description": "JSON-serialized props payload passed to the target island component. In HTML, prefer single quotes around the attribute so the JSON can keep its double quotes."
+        }
+      ]
+    },
+    {
+      "name": "abs-htmx-stream-slot",
+      "description": "Platform-native AbsoluteJS HTMX streaming primitive. AbsoluteJS lowers this element into native HTMX markup so the browser performs a normal hx-get request for the resolved fragment.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "HTMX fragment endpoint to request for this slot. AbsoluteJS lowers the tag to hx-get=\"...\"."
+        },
+        {
+          "name": "trigger",
+          "description": "Optional HTMX trigger. Defaults to load."
+        },
+        {
+          "name": "swap",
+          "description": "Optional HTMX swap strategy. Defaults to outerHTML."
+        },
+        {
+          "name": "target",
+          "description": "Optional HTMX target selector. Defaults to this."
+        }
+      ]
+    }
+  ],
+  "globalAttributes": [
+    {
+      "name": "data-absolute-slot",
+      "description": "Marks a DOM node as an AbsoluteJS streaming slot placeholder or slot root. AbsoluteJS uses it to find and patch the correct region during out-of-order streaming."
+    }
+  ]
+}
