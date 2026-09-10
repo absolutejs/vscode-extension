@@ -39,11 +39,12 @@
     "editor"
   ],
   "files": [
-    "extension.js",
-    "html-custom-data.json",
-    "README.md",
     "CHANGELOG.md",
     "LICENSE",
+    "README.md",
+    "changelog.json",
+    "extension.js",
+    "html-custom-data.json",
     "package.json"
   ],
   "contributes": {
@@ -52,9 +53,11 @@
     ]
   },
   "scripts": {
-    "config": "absolute config"
+    "config": "absolute config",
+    "check:package": "absolute-changelog check"
   },
   "devDependencies": {
-    "@absolutejs/absolute": "^0.19.0-beta.1051"
+    "@absolutejs/absolute": "^0.20.0-beta.0",
+    "@absolutejs/changelog": "^0.1.2"
   }
 }
