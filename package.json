@@ -54,10 +54,11 @@
   },
   "scripts": {
     "config": "absolute config",
-    "check:package": "absolute-changelog check"
+    "check:package": "absolute-changelog check",
+    "prepublishOnly": "absolute-changelog check"
   },
   "devDependencies": {
     "@absolutejs/absolute": "^0.20.0-beta.0",
-    "@absolutejs/changelog": "^0.1.2"
+    "@absolutejs/changelog": "^0.2.0"
   }
 }
